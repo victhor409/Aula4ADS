@@ -9,40 +9,20 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
+import JSwing.JanelaSimples;
+
 public class Program {
-	
-	
-	public static class MinhaJanela extends JFrame {
-
-	
-		private static final long serialVersionUID = 1L;
-
-		public MinhaJanela() throws HeadlessException{
-			super("Apenas um teste");
-			setLayout(new BorderLayout());
-			setBounds(10, 10, 300, 200);
-			JPanel jp = new JPanel(new FlowLayout());
-			jp.add(new Button("ok"));
-			jp.add(new Button("Cancelar"));
-			add(jp, "South");
-		}
 		
+	
+	
 	public static void main(String[] args) {
-		
-		new MinhaJanela().setVisible(true);
-		
-		int a = new Integer(
-				JOptionPane.showInputDialog("Primeiro Numero"));
-		int b = new Integer(
-				JOptionPane.showInputDialog("Segundo numero"));
-		
-		int c = a+b;
-		JOptionPane.showMessageDialog(null,"A soma será: "+c, "soma", JOptionPane.INFORMATION_MESSAGE);
-		
-		
-
+	
+	JanelaSimples j1 = new JanelaSimples();
+	j1.setModal(true);
+	j1.setBounds(0,0 , 300, 300);
+	j1.setVisible(true);
+	
 	}
-	}
-}
-
+}	
+		
 
